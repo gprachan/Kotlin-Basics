@@ -57,13 +57,13 @@ fun hasPrefix(x: Any) = when (x) {
 
 
 fun usingForLoop() {
-    val array = arrayOf(1, 2, 3)
+    // val array = arrayOf(1, 2, 3)
 //    for (i in array) println(i)
     /*for (item: Int in array) {
         println(item)
     }*/
-
-    for ((index, item) in array){
+    val array = Array(5) { it + 1 }
+    for ((index, item) in array) {
         println("There is $item at ${array[index]}")
     }
 }

@@ -32,8 +32,19 @@ fun main() {
     println(hasPrefix("prefixYellow").toString())
     println("")
     println("")
-    usingForLoop()
+//    usingForLoop()
 //    forLoopInRange()
+    loopBreak()
+}
+
+fun loopBreak() {
+    loop@ for (i in 1..100) {
+        if (i == 12) {
+            break@loop
+        } else {
+            println(i)
+        }
+    }
 }
 
 fun whenExpression() {
@@ -57,7 +68,7 @@ fun hasPrefix(x: Any) = when (x) {
 
 
 fun usingForLoop() {
-    val array = arrayOf(10, 11 , 30)
+    val array = arrayOf(10, 11, 30)
 //    for (i in array) println(i)
     /*for (item: Int in array) {
         println(item)
